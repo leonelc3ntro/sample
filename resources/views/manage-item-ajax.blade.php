@@ -4,11 +4,11 @@
 	<title>Laravel Ajax CRUD Example</title>
 	<meta name="csrf-token" content="{{ csrf_token() }}">
 	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha/css/bootstrap.css">	
-	<link href="{{ asset('css/app.css') }}" rel="stylesheet">
+	
 </head>
 <body>
 	<div id="app">
-	@include('partials.menu')
+	
 		<div class="container">
 
 

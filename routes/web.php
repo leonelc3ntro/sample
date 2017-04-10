@@ -20,7 +20,7 @@ Route::get('items', 'ItemAjaxController@manageItemAjax');
 Route::resource('item-ajax', 'ItemAjaxController');
 //-------------------------------------------------------------
 Route::get('books', 'BookController@manageBooks');
-Route::resource('book', 'BookController');
+Route::resource('book-ajax', 'BookController');
 
 
 

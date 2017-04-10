@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<Name>Books</Name>
+	<title>Books</title>
 	<meta name="csrf-token" content="{{ csrf_token() }}">
 	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha/css/bootstrap.css">	
-	<link href="{{ asset('css/app.css') }}" rel="stylesheet">
+	
 </head>
 <body>
 	<div id="app">
-	@include('partials.menu')
+	
 		<div class="container">
 
 
@@ -18,7 +18,7 @@
 			            <h2>Books</h2>
 			        </div>
 			        <div class="pull-right">
-					<button type="button" class="btn btn-success" data-toggle="modal" data-target="#create-Book">
+					<button type="button" class="btn btn-success" data-toggle="modal" data-target="#create-book">
 						  Create Book
 					</button>
 			        </div>
@@ -40,23 +40,23 @@
 			<ul id="pagination" class="pagination-sm"></ul>
 
 		    <!-- Create Book Modal -->
-			<div class="modal fade" id="create-Book" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+			<div class="modal fade" id="create-book" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
 			  <div class="modal-dialog" role="document">
 			    <div class="modal-content">
 			      <div class="modal-header">
 			        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
-			        <h4 class="modal-Name" id="myModalLabel">Create Book</h4>
+			        <h4 class="modal-name" id="myModalLabel">Create Book</h4>
 			      </div>
 			      <div class="modal-body">
 
-			      		<form data-toggle="validator" action="{{ route('book.store') }}" method="POST">
+			      		<form data-toggle="validator" action="{{ route('book-ajax.store') }}" method="POST">
 			      			<div class="form-group">
-								<label class="control-label" for="Name">Name:</label>
-								<input type="text" name="Name" class="form-control" data-error="Please enter Name." required />
+								<label class="control-label" for="name">Name:</label>
+								<input type="text" name="name" class="form-control" data-error="Please enter name." required />
 								<div class="help-block with-errors"></div>
 							</div>
 							<div class="form-group">
-								<label class="control-label" for="Name">Description:</label>
+								<label class="control-label" for="description">Description:</label>
 								<textarea name="description" class="form-control" data-error="Please enter description." required></textarea>
 								<div class="help-block with-errors"></div>
 							</div>
@@ -70,23 +70,23 @@
 			</div>
 
 			<!-- Edit Book Modal -->
-			<div class="modal fade" id="edit-Book" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+			<div class="modal fade" id="edit-book" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
 			  <div class="modal-dialog" role="document">
 			    <div class="modal-content">
 			      <div class="modal-header">
 			        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
-			        <h4 class="modal-Name" id="myModalLabel">Edit Book</h4>
+			        <h4 class="modal-name" id="myModalLabel">Edit Book</h4>
 			      </div>
 			      <div class="modal-body">
 
-			      		<form data-toggle="validator" action="/Book-ajax/14" method="put">
+			      		<form data-toggle="validator" action="/book-ajax/14" method="put">
 			      			<div class="form-group">
-								<label class="control-label" for="Name">Name:</label>
-								<input type="text" name="Name" class="form-control" data-error="Please enter Name." required />
+								<label class="control-label" for="name">Name:</label>
+								<input type="text" name="name" class="form-control" data-error="Please enter Name." required />
 								<div class="help-block with-errors"></div>
 							</div>
 							<div class="form-group">
-								<label class="control-label" for="Name">Description:</label>
+								<label class="control-label" for="description">Description:</label>
 								<textarea name="description" class="form-control" data-error="Please enter description." required></textarea>
 								<div class="help-block with-errors"></div>
 							</div>
@@ -114,7 +114,7 @@
         <link href="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css" rel="stylesheet">
 
         <script type="text/javascript">
-    	   var url = "<?php echo route('book.index')?>";
+    	   var url = "<?php echo route('book-ajax.index')?>";
         </script>
         <script src="{{ asset('/js/books.js') }}"></script> 
 

@@ -10,7 +10,7 @@ class ItemAjaxController extends Controller
 
     public function manageItemAjax()
     {
-        return view('items');
+        return view('manage-item-ajax');
     }
 
     /**

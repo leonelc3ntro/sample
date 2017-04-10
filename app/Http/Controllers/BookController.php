@@ -10,7 +10,7 @@ class BookController extends Controller
 
     public function manageBooks()
     {
-        return view('books');
+        return view('books.books');
     }
 
     /**
