@@ -15,8 +15,15 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('manage-item-ajax', 'ItemAjaxController@manageItemAjax');
+//-------------------------------------------------------------
+Route::get('items', 'ItemAjaxController@manageItemAjax');
 Route::resource('item-ajax', 'ItemAjaxController');
+//-------------------------------------------------------------
+Route::get('books', 'BookController@manageBooks');
+Route::resource('book', 'BookController');
 
-Route::get('manage-states', 'StateController@manageState');
-Route::resource('states', 'StateController');
+
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index');

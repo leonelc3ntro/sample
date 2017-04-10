@@ -3,14 +3,14 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
-use App\Item;
+use App\Models\Item;
 
 class ItemAjaxController extends Controller
 {
 
     public function manageItemAjax()
     {
-        return view('manage-item-ajax');
+        return view('items');
     }
 
     /**

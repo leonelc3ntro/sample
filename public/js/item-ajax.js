@@ -15,20 +15,25 @@ function manageData() {
 
     	total_page = data.last_page;
     	current_page = data.current_page;
+        
 
-    	$('#pagination').twbsPagination({
-	        totalPages: total_page,
-	        visiblePages: current_page,
-	        onPageClick: function (event, pageL) {
-	        	page = pageL;
-                if(is_ajax_fire != 0){
-	        	  getPageData();
+        if ( total_page > 0 ) {
+
+            $('#pagination').twbsPagination({
+                totalPages: total_page,
+                visiblePages: current_page,
+                onPageClick: function (event, pageL) {
+                    page = pageL;
+                    if(is_ajax_fire != 0){
+                      getPageData();
+                    }
                 }
-	        }
-	    });
+            });
 
-    	manageRow(data.data);
-        is_ajax_fire = 1;
+            manageRow(data.data);
+            is_ajax_fire = 1;
+
+        }
     });
 }
 
